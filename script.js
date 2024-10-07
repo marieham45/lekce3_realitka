@@ -25,18 +25,18 @@ const apartment = {
 
 /*
 Vytvořte webovou stránku s JavaScriptem, zkopírujte si tento kód do vašeho programu a vyřešte následující úkoly.
-
-Pomocí tečkové notace vypište do stránky dispozici bytu.
-Vypište do stránky čistý nájem bez poplatků.
-Vypište do stránky celý objekt představující výměru bytu.
-Do separátních proměnných uložte město a městskou část. Vypište je do stránky.
-Změnte stav inzerátu z 'free' na 'taken'.
   */
 
+// Pomocí tečkové notace vypište do stránky dispozici bytu.
 document.body.innerHTML +=
   "<p>Dispozice bytu: " + apartment.disposition + "</p>";
+
+// Vypište do stránky čistý nájem bez poplatků.
 document.body.innerHTML +=
   "<p>Nájem: " + apartment.price.rent + " " + apartment.price.currency + "</p>";
+
+// Vypište do stránky celý objekt představující výměru bytu.
+
 document.body.innerHTML +=
   "<p>Plocha bytu: " +
   apartment.area.floorage +
@@ -48,11 +48,13 @@ document.body.innerHTML +=
   apartment.area.units +
   "</p>";
 
+//Do separátních proměnných uložte město a městskou část. Vypište je do stránky.
 const city = apartment.city;
 const district = apartment.district;
 
 document.body.innerHTML += "<p>Adresa bytu: " + city + ", " + district + "</p>";
 
-document.body.innerHTML += "<p>Stav inzerátu: " + apartment.status + "</p>";
+// Změnte stav inzerátu z 'free' na 'taken'.
+document.body.innerHTML += "<p>Stav inzerátu: " + apartment.status + "</p>"; // před změnou
 apartment.status = "taken";
-document.body.innerHTML += "<p>Stav inzerátu: " + apartment.status + "</p>";
+document.body.innerHTML += "<p>Stav inzerátu: " + apartment.status + "</p>"; // po změně
